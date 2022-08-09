@@ -13,13 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
- Route::get('/', function () {
-     return view('welcome');
-  });
+//  Route::get('/', function () {
+//      return view('welcome');
+//   });
 
+//start promote
+Route::view('/', 'promotepage.home')->name('home');
+Route::view('/categories', 'promotepage.categories')->name('categories');
+//end promote
+
+
+//start admin
  Auth::routes();
 
- Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//end admin
 
-//  Route::view('/', 'promotepage.home')->name('home');
-//  Route::view('/admin/home', 'adminpage.adminhome')->name('adminhome');
