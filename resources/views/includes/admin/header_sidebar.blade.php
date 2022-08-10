@@ -56,7 +56,7 @@
       <span class="nav-link">Navigation</span>
     </li>
     <li class="nav-item menu-items">
-      <a class="nav-link" href="<?php if(isset($page)) { echo "./"; } else { echo "../../"; } ?>index.php">
+      <a class="nav-link" href="<?php if(isset($page)) { echo "./"; } else { echo "../../"; } ?>index.php/admin/home">
         <span class="menu-icon">
           <i class="mdi mdi-speedometer"></i>
         </span>
@@ -123,6 +123,8 @@
         <span class="menu-title">promotion</span>
       </a>
     </li>
+
+    
    <!-- <li class="nav-item menu-items">
       <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
         <span class="menu-icon">

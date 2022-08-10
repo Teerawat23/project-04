@@ -26,6 +26,6 @@ Route::view('/categories', 'promotepage.categories')->name('categories');
 //start admin
  Auth::routes();
 
-  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+  Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('adminhome');
 //end admin
 
