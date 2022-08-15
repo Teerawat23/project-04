@@ -20,12 +20,15 @@ use Illuminate\Support\Facades\Route;
 //start promote
 Route::view('/', 'promotepage.home')->name('home');
 Route::view('/categories', 'promotepage.categories')->name('categories');
+Route::view('/anime-details', 'promotepage.anime-details')->name('anime-details');
+Route::view('/content', 'promotepage.content')->name('content');
+Route::view('/blog', 'promotepage.blog')->name('blog');
 //end promote
 
 
 //start admin
  Auth::routes();
 
-  Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('adminhome');
+ Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('adminhome');
 //end admin
 
