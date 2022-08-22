@@ -56,7 +56,7 @@
       <span class="nav-link">Navigation</span>
     </li>
     <li class="nav-item menu-items">
-      <a class="nav-link" href="<?php if(isset($page)) { echo "./"; } else { echo "../../"; } ?>index.php/admin/home">
+      <a class="nav-link" href="{{url('/admin/home')}}">
         <span class="menu-icon">
           <i class="mdi mdi-speedometer"></i>
         </span>
@@ -80,7 +80,7 @@
       </div>
     </li>-->
     <li class="nav-item menu-items">
-      <a class="nav-link" href="<?php if(isset($page)) { echo "pages/"; } else { echo "../"; } ?>product/product.php">
+      <a class="nav-link" href="{{url('/admin/product')}}">
         <span class="menu-icon">
           <i class="mdi mdi-playlist-play"></i>
         </span>
@@ -89,7 +89,7 @@
     </li>
 
     <li class="nav-item menu-items">
-      <a class="nav-link" href="<?php if(isset($page)) { echo "pages/"; } else { echo "../"; } ?>tyPeproductt/tyPeproductt.php">
+      <a class="nav-link" href="{{url('/admin/typeproduct')}}">
         <span class="menu-icon">
           <i class="mdi mdi-table-large"></i>
         </span>
@@ -98,7 +98,7 @@
     </li>
 
     <li class="nav-item menu-items">
-      <a class="nav-link" href="<?php if(isset($page)) { echo "pages/"; } else { echo "../"; } ?>Employee/Employee.php">
+      <a class="nav-link" href="{{url('/admin/employee')}}">
         <span class="menu-icon">
           <i class="mdi mdi-chart-bar"></i>
         </span>
@@ -107,7 +107,7 @@
     </li>
 
     <li class="nav-item menu-items">
-      <a class="nav-link" href="<?php if(isset($page)) { echo "pages/"; } else { echo "../"; } ?>news/news.php">
+      <a class="nav-link" href="{{url('/admin/news')}}">
         <span class="menu-icon">
           <i class="mdi mdi-contacts"></i>
         </span>
@@ -116,7 +116,7 @@
     </li>
 
     <li class="nav-item menu-items">
-      <a class="nav-link" href="<?php if(isset($page)) { echo "pages/"; } else { echo "../"; } ?>promotion/promotion.php">
+      <a class="nav-link" href="{{url('/admin/promotion')}}">
         <span class="menu-icon">
           <i class="mdi mdi-contacts"></i>
         </span>

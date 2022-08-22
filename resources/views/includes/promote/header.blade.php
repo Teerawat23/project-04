@@ -17,7 +17,7 @@
                                 <li><a href="{{ url('/blog') }}">Our Blog</a></li>
                                 <li><a href="{{ url('/') }}">Contacts</a></li>
                                 @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                <!-- <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block"> -->
                     @auth
                         <li><a href="{{ url('/admin/home') }}" class="nav-link scrollto">admin</a></li>
                     @else
@@ -27,7 +27,7 @@
                            <li> <a href="{{ route('register') }}" class="nav-link scrollto">Register</a></li>
                         @endif
                     @endauth
-                </div>
+                <!-- </div> -->
             @endif
             
             
