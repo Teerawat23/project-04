@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use App\Models\Promotion;
 
 class PromotionController extends Controller
 {
@@ -23,7 +22,8 @@ class PromotionController extends Controller
      */
     public function index()
     {
+        $promo = Promotion::all();
         // return view('home');
-        return view('adminpage.adminpromotion.promotion');
+        return view('adminpage.adminpromotion.promotion', compact('promo'));
     }
 }

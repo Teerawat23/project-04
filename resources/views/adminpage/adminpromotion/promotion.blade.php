@@ -51,56 +51,26 @@ button{
                       <table class="table table-striped">
                         <thead>
                           <tr>
+                            <th> Number </th>
+                            <th> Name </th>
                             <th> Picture </th>
                             <th> Details </th>
                           </tr>
                         </thead>
                         <tbody>
+                          @foreach($promo as $row)
                           <tr>
-                          <td class="py-1">
+                          <!-- <td class="py-1">
                               <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td>.......................</td>
+                            </td> -->
+                            <td>{{$row->id}}</td>
+                            <td>{{$row->name}}</td>
+                            <td>{{$row->picture}}</td>
+                            <td>{{$row->detail}}</td>
                             <td><a href="{{url('/admin/promotion/edit')}}"><button class="">Modify</button></a></td>
                             <form><td><button type="delete" class="delete">Delete</button></td></form>
                           </tr>
-
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td>.......................</td>
-                            <td><a href="{{url('/admin/promotion/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td>.......................</td>
-                            <td><a href="{{url('/admin/promotion/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td>.......................</td>
-                            <td><a href="{{url('/admin/promotion/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td>.......................</td>
-                            <td><a href="{{url('/admin/promotion/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
+                          @endforeach
                           
                         </tbody>
                       </table>
