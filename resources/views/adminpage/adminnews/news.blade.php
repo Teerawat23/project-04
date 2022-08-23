@@ -42,7 +42,6 @@ button{
 <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Striped Table</h4>
                     <br>
                     <p class="card-description"> <a href="{{url('/admin/news/add')}}" class="c">Add News+</a>
                     </p>
@@ -50,63 +49,30 @@ button{
                       <table class="table table-striped">
                         <thead>
                           <tr>
+                            <th> Number </th>
                             <th> Picture </th>
                             <th> Name </th>
                             <th> Details </th>
                           </tr>
                         </thead>
                         <tbody>
+
+                        @foreach($new as $row)
+
                           <tr>
-                          <td class="py-1">
+                          <td>{{$row->id}}</td>
+                          <td>{{$row->picture}}</td>
+                          <!-- <td class="py-1"> picture
                               <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>.......................</td>
+                            </td> -->
+                            <td>{{$row->name}}  </td>
+                            <td>{{$row->detail}}</td>
                             <td><a href="{{url('/admin/news/edit')}}"><button class="">Modify</button></a></td>
                             <form><td><button type="delete" class="delete">Delete</button></td></form>
                           </tr>
+                          <!-- 精霊幻想記 -->
+                        @endforeach
 
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>.......................</td>
-                            <td><a href="modify_news.php"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>.......................</td>
-                            <td><a href="modify_news.php"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>.......................</td>
-                            <td><a href="modify_news.php"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>.......................</td>
-                            <td><a href="modify_news.php"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
-                          
                         </tbody>
                       </table>
                     </div>

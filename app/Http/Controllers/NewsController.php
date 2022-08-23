@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use App\Models\News;
 
 class NewsController extends Controller
 {
@@ -23,7 +22,8 @@ class NewsController extends Controller
      */
     public function index()
     {
+        $new = News::all();
         // return view('home');
-        return view('adminpage.adminnews.news');
+        return view('adminpage.adminnews.news' , compact('new'));
     }
 }

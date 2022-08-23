@@ -35,9 +35,9 @@ Route::view('/blog', 'promotepage.blog')->name('blog');
  Route::get('/admin/product/add', [App\Http\Controllers\ProductaddController::class, 'index'])->name('adminpage.adminproduct.add');
  Route::get('/admin/product/edit', [App\Http\Controllers\ProducteditController::class, 'index'])->name('adminpage.adminproduct.edit');
  //Type Product
- Route::get('/admin/typeproduct', [App\Http\Controllers\TypeproductController::class, 'index'])->name('adminpage.admintypeproduct.product');
- Route::get('/admin/typeproduct/add', [App\Http\Controllers\TypeproductaddController::class, 'index'])->name('adminpage.admintypeproduct.add');
- Route::get('/admin/typeproduct/edit', [App\Http\Controllers\TypeproducteditController::class, 'index'])->name('adminpage.admintypeproduct.edit');
+ Route::get('/admin/typeproduct', [App\Http\Controllers\TypeProductController::class, 'index'])->name('adminpage.admintypeproduct.product');
+ Route::get('/admin/typeproduct/add', [App\Http\Controllers\TypeProductaddController::class, 'index'])->name('adminpage.admintypeproduct.add');
+ Route::get('/admin/typeproduct/edit', [App\Http\Controllers\TypeProducteditController::class, 'index'])->name('adminpage.admintypeproduct.edit');
  //employee
  Route::get('/admin/employee', [App\Http\Controllers\EmployeeController::class, 'index'])->name('adminpage.adminemployee.employee');
  Route::get('/admin/employee/add', [App\Http\Controllers\EmployeeaddController::class, 'index'])->name('adminpage.adminemployee.add');

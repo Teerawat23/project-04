@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\TypeProduct;
 
-use Illuminate\Http\Request;
 
 class TypeproductController extends Controller
 {
@@ -23,7 +23,9 @@ class TypeproductController extends Controller
      */
     public function index()
     {
+        $type = TypeProduct::all();
+        
         // return view('home');
-        return view('adminpage.admintypeproduct.typeproduct');
+        return view('adminpage.admintypeproduct.typeproduct' , compact('type'));
     }
 }

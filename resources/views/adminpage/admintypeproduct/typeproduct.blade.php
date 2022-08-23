@@ -50,63 +50,27 @@ button{
                       <table class="table table-striped">
                         <thead>
                           <tr>
-                            <th> Picture </th>
+                            <!-- <th> Picture </th> -->
+                            <th> Number </th>
                             <th> Name </th>
                             <th> Details </th>
                           </tr>
                         </thead>
+
                         <tbody>
+                          @foreach($type as $row)
                           <tr>
-                          <td class="py-1">
+                          <!-- <td class="py-1"> รูป
                               <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>.......................</td>
+                            </td> -->
+                            <td> {{$row->id}} </td>
+                            <td>{{$row->name}}</td>
+                            <td>{{$row->detail}}</td>
                             <td><a href="{{url('/admin/typeproduct/edit')}}"><button class="">Modify</button></a></td>
                             <form><td><button type="delete" class="delete">Delete</button></td></form>
                           </tr>
-
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>.......................</td>
-                            <td><a href="{{url('/admin/typeproduct/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>.......................</td>
-                            <td><a href="modify_news.php"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>.......................</td>
-                            <td><a href="modify_news.php"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>.......................</td>
-                            <td><a href="modify_news.php"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-
                           
+                          @endforeach
                         </tbody>
                       </table>
                     </div>
