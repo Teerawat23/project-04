@@ -11,11 +11,11 @@
                     <div class="header__right">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                            <li class="active"><a href="{{ url('/') }}">Homepage</a></li>
-                                <li><a href="{{ url('/categories') }}">Categories</a></li>
-                                <li><a href="{{ url('/content') }}">Content</a></li>
-                                <li><a href="{{ url('/blog') }}">Our Blog</a></li>
-                                <li><a href="{{ url('/') }}">Contacts</a></li>
+                            <li {{ request()->is('/') ? 'class=active' : ''}}><a href="{{ url('/') }}">Homepage</a></li>
+                                <li {{ request()->is('categories') ? 'class=active' : ''}}><a href="{{ url('/categories') }}">Categories</a></li>
+                                <li {{ request()->is('content') ? 'class=active' : ''}}><a href="{{ url('/content') }}">Content</a></li>
+                                <li {{ request()->is('blog') ? 'class=active' : ''}}><a href="{{ url('/blog') }}">Our Blog</a></li>
+                                <li {{ request()->is('') ? 'class=active' : ''}}><a href="{{ url('/') }}">Contacts</a></li>
                                 @if (Route::has('login'))
                 <!-- <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block"> -->
                     @auth
