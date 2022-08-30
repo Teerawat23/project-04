@@ -51,96 +51,32 @@ button{
                       <table class="table table-striped">
                         <thead>
                           <tr>
+                            <th> Number </th>
                             <th> Picture </th>
                             <th> Name </th>
                             <th> Type </th>
                             <th> Price </th>
                             <th> Amount </th>
+                            <th> Detail </th>
                           </tr>
                         </thead>
                         <tbody>
+                        @foreach($product as $row)
                           <tr>
-                            <td class="py-1">
+                            <!-- <td class="py-1">
                               <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>Light Novel</td>
-                            <td> 255 </td>
-                            <td> 1 </td>
+                            </td> -->
+                            <td>{{ $row->id }} </td>
+                            <td>{{ $row->picture }} </td>
+                            <td>{{ $row->name}} </td>
+                            <td>{{ $row->typeproduct}} </td>
+                            <td>{{ $row->price}} </td>
+                            <td>{{ $row->amount}} </td>
+                            <td>{{ $row->detail}} </td>
                             <td><a href="{{url('/admin/product/edit')}}"><button class="">Modify</button></a></td>
                             <form><td><button type="delete" class="delete">Delete</button></td></form>
                           </tr>
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>Light Novel</td>
-                            <td> 255 </td>
-                            <td> 1 </td>
-                            <td><a href="{{url('/admin/product/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-                          </tr>
-                          
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>Light Novel</td>
-                            <td> 255 </td>
-                            <td> 1 </td>
-                            <td><a href="{{url('/admin/product/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>Light Novel</td>
-                            <td> 255 </td>
-                            <td> 1 </td>
-                            <td><a href="{{url('/admin/product/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>Light Novel</td>
-                            <td> 255 </td>
-                            <td> 1 </td>
-                            <td><a href="{{url('/admin/product/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-                          </tr>
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>Light Novel</td>
-                            <td> 255 </td>
-                            <td> 1 </td>
-                            <td><a href="{{url('/admin/product/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-                          </tr>
-                          <tr>
-                          <td class="py-1">
-                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                            </td>
-                            <td> 精霊幻想記 </td>
-                            <td>Light Novel</td>
-                            <td> 255 </td>
-                            <td> 1 </td>
-                            <td><a href="{{url('/admin/product/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
-                          </tr>
-                          </tr>
+                          @endforeach
                         </tbody>
                       </table>
                     </div>

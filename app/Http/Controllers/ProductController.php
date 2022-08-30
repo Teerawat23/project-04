@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -23,7 +24,8 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $product = Product::all();
         // return view('home');
-        return view('adminpage.adminproduct.product');
+        return view('adminpage.adminproduct.product', compact('product'));
     }
 }
