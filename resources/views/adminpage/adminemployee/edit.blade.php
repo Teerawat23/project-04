@@ -181,7 +181,7 @@ input{
                         </div>
                       </div>
                       <br>
-                      <center> <input type="submit" value="Modify Info" class="rr">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset" value="Reset Info" class="rr"></center>
+                      <center> <input type="submit" value="Edit Info" class="rr">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset" value="Reset Info" class="rr"></center>
                     </form>
                   </div>
                 </div>

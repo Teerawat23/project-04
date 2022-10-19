@@ -14,29 +14,30 @@
                 <div class="card">
                   <div class="card-body"><br><br>
                     <h1><a href="{{url('/admin/product')}}" class="sss">Product</a></h1>
-                    <form class="forms-sample">
+                    <form class="forms-sample" action="{{route('adminpage.adminproduct.add')}}" method="POST" enctype="multipart/form-data">
                       <div class="form-group">
+                        @csrf
                         <label for="exampleInputName1">Name</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Name" name="name">
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label for="exampleSelectlanguage">language</label>
                         <select class="form-control" id="exampleSelectlanguage">
                           <option>Thai</option>
                           <option>Japane</option>
                         </select>
-                      </div>
-                      <div class="form-group">
+                      </div> -->
+                       <div class="form-group">
                         <label for="exampleSelecttype">Type</label>
-                        <select class="form-control" id="exampleSelecttype">
+                        <select class="form-control" id="exampleSelecttype" name="typeproduct">
                           <option>Manga</option>
                           <option>Light Novel</option>
                           <option>Others</option>
                         </select>
-                      </div>
-                      <div class="form-group">
+                      </div> 
+                      <!-- <div class="form-group">
                         <label for="exampleSelectPublisher">Publisher</label>
-                        <select class="form-control" id="exampleSelectPublisher">
+                         <select class="form-control" id="exampleSelectPublisher">
                           <option>Phoenix</option>
                           <option>Luckpim</option>
                           <option>Firest Page Pro</option>
@@ -46,13 +47,13 @@
                           <option>MF文庫</option>
                           <option>ファンタジア文庫</option>
                           <option>HJ文庫</option>
-                        </select>
-                      </div>
+                        </select> 
+                      </div> -->
                       <div class="form-group">
                         <label>Picture</label>
                         <input type="file" name="img[]" class="file-upload-default">
                         <div class="input-group col-xs-12">
-                          <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                          <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image" name="picture">
                           <span class="input-group-append">
                             <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
                           </span>
@@ -60,19 +61,19 @@
                       </div>
                       <div class="form-group">
                         <label for="exampleInputstory">story</label>
-                        <input type="text" class="form-control" id="exampleInputstory" placeholder="story">
+                        <input type="text" class="form-control" id="exampleInputstory" placeholder="story" name="story">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPrice">Price</label>
-                        <input type="text" class="form-control" id="exampleInputPrice" placeholder="Price">
+                        <input type="text" class="form-control" id="exampleInputPrice" placeholder="Price" name="price">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputAmount">Amount</label>
-                        <input type="number" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                        <input type="number" class="form-control" id="exampleInputAmount" placeholder="Amount" name="amount">
                       </div>
                       <div class="form-group">
                         <label for="exampleTextarea1">Product details</label>
-                        <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                        <textarea class="form-control" id="exampleTextarea1" rows="4" name="detail"></textarea>
                       </div>
                       <button type="submit" class="btn btn-primary mr-2">Add</button>
                       <button type="reset" class="btn btn-primary mr-2">Reset</button>

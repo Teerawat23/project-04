@@ -16,10 +16,11 @@
                 <div class="card">
                   <div class="card-body"><br><br>
                   <h1><a href="{{url('/admin/news')}}" class="sss">News</a></h1>
-                    <form class="forms-sample">
+                    <form class="forms-sample" action="{{route('adminpage.adminnews.add')}}" method="POST">
                       <div class="form-group">
+                        @csrf
                         <label for="exampleInputName1">Name</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Name" name="name">
                       </div>
                       <div class="form-group">
                         <label>Picture</label>
@@ -33,7 +34,7 @@
                       </div>
                       <div class="form-group">
                         <label for="exampleTextarea1">details</label>
-                        <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                        <textarea class="form-control" id="exampleTextarea1" rows="4" name="detail"></textarea>
                       </div>
                       <button type="submit" class="btn btn-primary mr-2">Add</button>
                       <button type="reset" class="btn btn-primary mr-2">Reset</button>

@@ -76,7 +76,7 @@ button{
                                 <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                               </div> 
                             </td>-->
-                            <td><a href="{{url('/admin/employee/edit')}}"><button class="">Modify</button></a></td>
+                            <td><a href="{{url('/admin/employee/edit')}}"><button class="">Edit</button></a></td>
                             <form><td><button type="delete" class="delete">Delete</button></td></form>
                           </tr>
         @endforeach

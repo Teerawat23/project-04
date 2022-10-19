@@ -43,7 +43,6 @@ button{
 <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Striped Table</h4>
                     <br>
                     <p class="card-description"> <a href="{{url('/admin/product/add')}}" class="c">Add Product+</a>
                     </p>
@@ -67,14 +66,14 @@ button{
                               <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
                             </td> -->
                             <td>{{ $row->id }} </td>
-                            <td>{{ $row->picture }} </td>
+                            <td><img src="{{ asset('./admin/upload/product/' .$row->picture )}} " width="1rem" height="1rem"></td>
                             <td>{{ $row->name}} </td>
                             <td>{{ $row->typeproduct}} </td>
                             <td>{{ $row->price}} </td>
                             <td>{{ $row->amount}} </td>
                             <td>{{ $row->detail}} </td>
-                            <td><a href="{{url('/admin/product/edit')}}"><button class="">Modify</button></a></td>
-                            <form><td><button type="delete" class="delete">Delete</button></td></form>
+                            <td><a href="{{url('/admin/product/edit')}}"><button class="">Edit</button></a></td>
+                            <form><td><a href="{{url('admin/product/delete/'.$row->id)}}"><button type="delete" class="delete" >Delete</button></td></form></a>
                           </tr>
                           @endforeach
                         </tbody>

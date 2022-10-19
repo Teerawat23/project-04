@@ -67,7 +67,7 @@ button{
                             </td> -->
                             <td>{{$row->name}}  </td>
                             <td>{{$row->detail}}</td>
-                            <td><a href="{{url('/admin/news/edit')}}"><button class="">Modify</button></a></td>
+                            <td><a href="{{url('/admin/news/edit')}}"><button class="">Edit</button></a></td>
                             <form><td><button type="delete" class="delete">Delete</button></td></form>
                           </tr>
                           <!-- 精霊幻想記 -->

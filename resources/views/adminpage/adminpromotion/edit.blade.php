@@ -30,7 +30,7 @@
                         <label for="exampleTextarea1">details</label>
                         <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
                       </div>
-                      <button type="submit" class="btn btn-primary mr-2">Modify</button>
+                      <button type="submit" class="btn btn-primary mr-2">Edit</button>
                       <button type="reset" class="btn btn-primary mr-2">Reset</button>
                       <button class="btn btn-dark">Cancel</button>
                     </form>

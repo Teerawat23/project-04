@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\user;
 use Illuminate\Http\Request;
 
 class EmployeeaddController extends Controller
@@ -22,7 +23,8 @@ class EmployeeaddController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
+    {   
+        $employee = user::all();
         // return view('home');
         return view('adminpage.adminemployee.add');
     }

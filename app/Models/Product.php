@@ -24,6 +24,6 @@ class Product extends Model
         'typeproduct',
         'price',
         'amount',
-        'detail',
+        'detail'
     ];
 }

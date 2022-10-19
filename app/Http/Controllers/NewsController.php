@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\News;
-
+use Illuminate\HTTp\Request;
 class NewsController extends Controller
 {
     /**
@@ -25,5 +25,20 @@ class NewsController extends Controller
         $new = News::all();
         // return view('home');
         return view('adminpage.adminnews.news' , compact('new'));
+    }
+
+    public function formadd(){
+        return view('adminpage.adminnews.add');
+    }
+    
+    public function add(Request $request){
+        $request->validate([
+            'picture' =>'nullable',
+            'name' => 'nullable',
+            'detail' => 'nullable',
+        ]);
+        news::create($request->all());
+        return redirect()->route('adminpage.adminnews.news')
+        ->with('success','news created succcessfully');
     }
 }

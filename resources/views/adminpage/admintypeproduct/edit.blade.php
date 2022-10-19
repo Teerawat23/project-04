@@ -61,7 +61,7 @@ button{
                         <label for="exampleInputEmail1">Detail</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Detail">
                       </div>
-                      <button type="submit" class="btn btn-primary mr-2">Modify</button>
+                      <button type="submit" class="btn btn-primary mr-2">Edit</button>
                       <button type="reset" class="btn btn-primary mr-2">Reset</button>
                       <button class="btn btn-dark">Cancel</button>
                     </form>
