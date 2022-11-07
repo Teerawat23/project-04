@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Promotion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Image;
+use File;
+
+
 class PromotionController extends Controller
 {
     /**
@@ -33,13 +37,44 @@ class PromotionController extends Controller
     }
     
     public function add(Request $request){
-        $request->validate([
-                'picture'=>'null',
-                'name' => 'nullable',
-                'detail' => 'nullable',
-        ]);
-        Promotion::create($request->all());
-        return redirect()->route('adminpage.adminpromotion.promotion')
-        ->with('success','product created succcessfully');
+        $promotion = new Promotion();
+
+        $promotion->name = $request->name;
+
+        $promotion->detail = $request->detail;
+
+        if ($request->hasFile('picture')) {
+
+            $filename = Str::random(10) . '.' . $request->file('picture')->getClientOriginalExtension();   //025G025365.jpg
+
+            $request->file('picture')->move(public_path() . '/admin/upload/promotion/', $filename);
+
+            Image::make(public_path() . '/admin/upload/promotion/' . $filename);
+
+            $promotion->picture = $filename;
+
+        } else {
+
+            $promotion->picture = 'nopic.jpg';
+
+        }
+
+        $promotion->save();
+
+
+        return redirect()->route('adminpage.adminpromotion.promotion');
     }
-}
+
+    public function edit($id){
+        $promotion = Promotion::find($id);
+        return view('adminpage.adminpromotion.edit',compact('promotion'));
+    }
+
+    public function update(Request $request, $id){
+        $promotion = Promotion::find($id);
+        $promotion->name = $request->name;
+        $promotion->detail = $request->detail;
+        $promotion->update();
+        return redirect()->route('adminpage.adminpromotion.promotion');
+    }
+    }

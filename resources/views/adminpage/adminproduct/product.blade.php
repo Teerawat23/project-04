@@ -66,13 +66,13 @@ button{
                               <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
                             </td> -->
                             <td>{{ $row->id }} </td>
-                            <td><img src="{{ asset('./admin/upload/product/' .$row->picture )}} " width="1rem" height="1rem"></td>
+                            <td><img src="{{ asset('admin/upload/product/' .$row->picture )}} " width="1rem" height="1rem"></td>
                             <td>{{ $row->name}} </td>
                             <td>{{ $row->typeproduct}} </td>
                             <td>{{ $row->price}} </td>
                             <td>{{ $row->amount}} </td>
                             <td>{{ $row->detail}} </td>
-                            <td><a href="{{url('/admin/product/edit')}}"><button class="">Edit</button></a></td>
+                            <td><a href="{{url('/admin/product/edit/' .$row->id)}}"><button class="">Edit</button></a></td>
                             <form><td><a href="{{url('admin/product/delete/'.$row->id)}}"><button type="delete" class="delete" >Delete</button></td></form></a>
                           </tr>
                           @endforeach

@@ -52,16 +52,17 @@ button{
                  <br>
                  <br>
                  <h1><a href="{{url('/admin/typeproduct')}}" class="sss" class="card-title">Type Product</a></h1>
-                    <form class="forms-sample">
+                 <form class="forms-sample" action="{{ url('/admin/typeproduct/update/'.$type->id) }}" method="POST" >
                       <div class="form-group">
+                      @csrf
                         <label for="exampleInputUsername1">Name</label>
-                        <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Name">
+                        <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Name" name="name" value="{{$type->name}}">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail1">Detail</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Detail">
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Detail" name="detail" value="{{$type->detail}}">
                       </div>
-                      <button type="submit" class="btn btn-primary mr-2">Edit</button>
+                      <button type="submit" class="btn btn-primary mr-2">Submit</button>
                       <button type="reset" class="btn btn-primary mr-2">Reset</button>
                       <button class="btn btn-dark">Cancel</button>
                     </form>

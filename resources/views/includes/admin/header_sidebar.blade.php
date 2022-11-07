@@ -105,16 +105,6 @@
         <span class="menu-title">Employee</span>
       </a>
     </li>
-
-    <li class="nav-item menu-items">
-      <a class="nav-link" href="{{url('/admin/news')}}">
-        <span class="menu-icon">
-          <i class="mdi mdi-contacts"></i>
-        </span>
-        <span class="menu-title">News</span>
-      </a>
-    </li>
-
     <li class="nav-item menu-items">
       <a class="nav-link" href="{{url('/admin/promotion')}}">
         <span class="menu-icon">

@@ -65,9 +65,9 @@ button{
                             </td> -->
                             <td>{{$row->id}}</td>
                             <td>{{$row->name}}</td>
-                            <td>{{$row->picture}}</td>
+                            <td><img src="{{ asset('admin/upload/promotion/' .$row->picture )}} " width="1rem" height="1rem"></td>
                             <td>{{$row->detail}}</td>
-                            <td><a href="{{url('/admin/promotion/edit')}}"><button class="">Edit</button></a></td>
+                            <td><a href="{{url('/admin/promotion/edit/' .$row->id)}}"><button class="">Edit</button></a></td>
                             <form><td><button type="delete" class="delete">Delete</button></td></form>
                           </tr>
                           @endforeach

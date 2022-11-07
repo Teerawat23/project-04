@@ -44,4 +44,17 @@ class TypeproductController extends Controller
         return redirect()->route('adminpage.admintypeproduct.typeproduct')
         ->with('success','product created succcessfully');
     }
+
+    public function edit($id){
+        $type = TypeProduct::find($id);
+        return view('adminpage.admintypeproduct.edit',compact('type'));
+    }
+
+    public function update(Request $request, $id){
+        $type = TypeProduct::find($id);
+        $type->name = $request->name;
+        $type->detail = $request->detail;
+        $type->update();
+        return redirect()->route('adminpage.adminpromotion.promotion');
+    }
 }

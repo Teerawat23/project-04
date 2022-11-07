@@ -33,12 +33,12 @@ class NewsController extends Controller
     
     public function add(Request $request){
         $request->validate([
-            'picture' =>'nullable',
-            'name' => 'nullable',
-            'detail' => 'nullable',
+                'picture'=>'null',
+                'name' => 'nullable',
+                'detail' => 'nullable',
         ]);
-        news::create($request->all());
+        News::create($request->all());
         return redirect()->route('adminpage.adminnews.news')
-        ->with('success','news created succcessfully');
+        ->with('success','product created succcessfully');
     }
 }
